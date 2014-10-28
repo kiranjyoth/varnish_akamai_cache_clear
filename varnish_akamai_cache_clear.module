@@ -14,11 +14,11 @@ module_load_include('module', 'akamai');
  */
 function varnish_akamai_cache_clear_menu() {
 
-  $items['admin/config/ge-varnish-akamai'] = array(
-    'title' => 'GE Varnish/Akamai Cache Clear',
+  $items['admin/config/varnish-akamai'] = array(
+    'title' => 'Varnish/Akamai Cache Clear',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('varnish_akamai_cache_clear_cache_control'),
-    'access arguments' => array('administer ge varnish/akamai'),
+    'access arguments' => array('administer varnish/akamai'),
     
   );
 
@@ -30,9 +30,9 @@ function varnish_akamai_cache_clear_menu() {
  */
 function varnish_akamai_cache_clear_permission() {
   return array(
-    'administer ge varnish/akamai' =>  array(
-      'title' => t('Administer GE varnish/Akamai Cache control utility'),
-      'description' => t('Perform GE varnish/Akamai cache clear functions'),
+    'administer varnish/akamai' =>  array(
+      'title' => t('Administer varnish/Akamai Cache control utility'),
+      'description' => t('Perform varnish/Akamai cache clear functions'),
     ),
   );
 }
